@@ -1,0 +1,18 @@
+<div>
+  <h1><%= @list.name %></h1>
+</div>
+
+<% @list.movies.each do |movie| %>
+  <div class="card w-20">
+    <%= movie.title %>
+    <%= movie.overview %>
+    <%= image_tag(movie.poster_url) %>
+  </div>
+<% end %>
+
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.button :submit %>
+<% end %>

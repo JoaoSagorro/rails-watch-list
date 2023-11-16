@@ -1,0 +1,9 @@
+<h1 class="mt-4 d-flex justify-content-center">Your Lists</h1>
+
+<% @lists.each do |list| %>
+  <%= link_to list.name, list_path(list) %>
+<% end %>
+
+
+
+<%= link_to 'Add new list', new_list_path%>
