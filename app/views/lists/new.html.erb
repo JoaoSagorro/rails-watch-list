@@ -1,7 +1,10 @@
-<h1>Your new list</h1>
+<div class="d-flex justify-content-center">
+  <h1>Your new list</h1>
+</div>
 
-
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
-<% end %>
+<div class="card w-50">
+  <%= simple_form_for @list do |f| %>
+    <h5 class="card-title"> <%= f.input :name %></h5>
+    <%= f.button :submit, class: 'btn btn-primary d-flex col-3 justify-content-center' %>
+  <% end %>
+</div>
