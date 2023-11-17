@@ -5,7 +5,7 @@
     <div class="row justify-content-evenly">
       <% @list.bookmarks.each do |bookmark| %>
           <div class="col-md-6 m-3 card" style="width: 18rem;">
-            <%= image_tag(bookmark.movie.poster_url) %>
+            <div class="p-2"><%= image_tag(bookmark.movie.poster_url)%></div>
             <%# <img src="..." class="card-img-top" alt="..."> %>
             <div class="card-body">
               <h5 class="card-title"><%= bookmark.movie.title %></h5>
